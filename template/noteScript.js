@@ -5,7 +5,8 @@ let trashNote = [];
 //show all notes
 function showNotes() {
           getArrayFromLocalStorage();
-          document.getElementById("renderMain").innerHTML = "";
+          let renderMain = document.getElementById("renderMain");
+          renderMain.innerHTML = "";
           for (let i = noteId.length - 1; i >= 0; i--) {
                     let id = i;
                     let showMessage = noteMessage[id];
