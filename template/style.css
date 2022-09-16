@@ -1,0 +1,157 @@
+body {
+      height: calc(100vh - 3px);
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0%;
+}
+
+.showSidebarBgWhite {
+      background-color: white;
+}
+
+.displayShow {
+      display: flex;
+      height: 100%;
+}
+
+/* Style the sidebar - fixed full height */
+.sidebar {
+      position: fixed;
+      width: 160px;
+      height: 100%;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #302c2c;
+      overflow-x: hidden;
+      padding-top: 16px;
+}
+
+/* Style sidebar links */
+.sidebar a {
+      margin-left: 10px;
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover {
+      color: #f1f1f1;
+}
+
+/* Style the main content */
+.main {
+      margin: 50px 50px 50px 200px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      height: min-content;
+}
+
+.container {
+      border: 2px solid #dedede;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      padding: 10px;
+      width: 340px;
+      margin: 25px 25px 25px 25px;
+      overflow-wrap: break-word;
+}
+
+.containerNewNote {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #dedede;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      overflow-wrap: break-word;
+      margin-left: -120px;
+}
+
+.noteText {
+      width: 300px;
+      text-align: center;
+      overflow-wrap: break-word;
+}
+
+.inputNoteText {
+      margin: 0px 10px 0px 5px;
+      text-align: center;
+      height: 100px;
+      width: 300px;
+      font-size: 16px;
+      overflow-wrap: break-word;
+}
+
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+      .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+      }
+
+      .container {
+            margin: 50px 25px 25px 25px;
+
+      }
+
+      .containerNewNote {
+            margin-left: 0px;
+      }
+
+      .main {
+            margin: 50px 0px 50px 0px;
+            width: 100%;
+      }
+
+      /* Style the topbar - fixed on top */
+      .sidebar {
+            position: fixed;
+            width: 100vw;
+            height: 50px;
+            z-index: 1;
+            background-color: rgb(48, 44, 44);
+            display: flex;
+            justify-content: space-around;
+      }
+
+}
+
+
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-width: 480px) {
+      .container {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            margin: 50px 0px 25px 0px;
+      }
+
+      .main {
+            margin: 50px 0px 50px 0px;
+      }
+
+      .sidebar a {
+            font-size: 16px;
+      }
+
+}
+
+@media screen and (max-width: 350px) {
+      .noteText {
+            width: 250px;
+      }
+}
